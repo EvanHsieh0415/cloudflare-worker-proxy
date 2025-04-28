@@ -1,7 +1,7 @@
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
-    const targetUrl = url.searchParams.get('url');
+    const targetUrl = request.headers.get('x-url');
 
     if (!targetUrl) {
       return new Response('Bad Request: Missing target URL', { status: 400 });
