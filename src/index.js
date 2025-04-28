@@ -23,7 +23,9 @@ async function handleRequest(request) {
       body: request.body
     });
 
-    return new Response(response.body, {
+    const arrayBuffer = await response.arrayBuffer();
+
+    return new Response(arrayBuffer, {
       status: response.status,
       headers: response.headers
     });
