@@ -3,6 +3,7 @@ account_id = ""
 workers_dev = true
 compatibility_date = "2022-01-01"
 main = "src/index.js"
+nodejs_compat = true
 
 [env.production]
 name = "cloudflare-worker-proxy-production"
