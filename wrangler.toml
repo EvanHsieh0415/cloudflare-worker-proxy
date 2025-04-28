@@ -1,0 +1,10 @@
+name = "cloudflare-worker-proxy"
+type = "javascript"
+account_id = ""
+workers_dev = true
+compatibility_date = "2022-01-01"
+
+[env.production]
+name = "cloudflare-worker-proxy-production"
+route = ""
+zone_id = ""
