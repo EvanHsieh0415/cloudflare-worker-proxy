@@ -1,2 +1,1 @@
-# cloudflare-worker-proxy
-A Cloudflare Worker project that acts as a proxy with API key authentication
+This repository is empty. Any task executed on it should be considered a new capability and needs to be created.
