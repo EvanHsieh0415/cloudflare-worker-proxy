@@ -2,11 +2,6 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const targetUrl = url.searchParams.get('url');
-    const apiKey = request.headers.get('x-api-key');
-
-    if (!apiKey || apiKey !== env.API_KEY) {
-      return new Response('Unauthorized', { status: 401 });
-    }
 
     if (!targetUrl) {
       return new Response('Bad Request: Missing target URL', { status: 400 });
