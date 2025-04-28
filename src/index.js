@@ -1,7 +1,4 @@
-import { config } from 'dotenv';
-config();
-
-const API_KEY = process.env.API_KEY;
+const API_KEY = API_KEY;
 
 async function handleRequest(request) {
   const url = new URL(request.url);

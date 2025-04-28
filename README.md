@@ -1,14 +1,10 @@
 # Cloudflare Worker Proxy
 
-This project is a Cloudflare Worker that acts as a proxy to fetch a URL provided in the URI. It authenticates requests using an API key set in the `.env` file.
+This project is a Cloudflare Worker that acts as a proxy to fetch a URL provided in the URI. It authenticates requests using an API key set in the Cloudflare environment variables.
 
 ## Setup
 
 1. Clone the repository.
-2. Create a `.env` file in the root directory of the project and add your API key:
-   ```
-   API_KEY=your_api_key_here
-   ```
 
 ## Deployment
 
