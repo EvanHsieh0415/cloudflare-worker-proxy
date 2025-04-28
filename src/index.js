@@ -14,7 +14,15 @@ async function handleRequest(request) {
   }
 
   try {
-    const response = await fetch(targetUrl);
+    const headers = new Headers(request.headers);
+    headers.delete('x-api-key');
+
+    const response = await fetch(targetUrl, {
+      method: request.method,
+      headers: headers,
+      body: request.body
+    });
+
     return new Response(response.body, {
       status: response.status,
       headers: response.headers
