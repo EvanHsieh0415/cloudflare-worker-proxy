@@ -8,19 +8,21 @@ export default {
     }
 
     try {
-      const headers = new Headers(request.headers);
-      headers.delete('x-api-key');
+      const nHeaders = new Headers(request.headers);
+      nHeaders.delete('x-api-key');
 
+      const { method, body, status, headers } = request;
+      
       const response = await fetch(targetUrl, {
-        method: request.method,
-        headers: headers,
-        body: request.body
+        method,
+        headers: nHeaders,
+        body
       });
 
       const arrayBuffer = await response.arrayBuffer();
 
       return new Response(arrayBuffer, {
-        status: response.status,
+        status,
         headers: response.headers
       });
     } catch (error) {
